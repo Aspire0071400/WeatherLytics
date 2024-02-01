@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">WeatherLytics</string>
     <string name="weatherlytics">WeatherLytics</string>
+    <string name="search_location">Search Location</string>
 </resources>

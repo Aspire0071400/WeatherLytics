@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.aspire.weatherlytics.MainActivity
 import com.aspire.weatherlytics.R
 
 class SplashActivity : AppCompatActivity() {
