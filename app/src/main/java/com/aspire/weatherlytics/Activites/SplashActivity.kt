@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.aspire.weatherlytics.MainActivity
 import com.aspire.weatherlytics.R
 
 class SplashActivity : AppCompatActivity() {
@@ -15,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent  = Intent(this, MainActivity::class.java)
+            val intent  = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
             finish()
         },2000)

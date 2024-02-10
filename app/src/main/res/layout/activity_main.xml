@@ -8,13 +8,25 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/sunny"
-        tools:context=".Activites.MainActivity"
-        android:id="@+id/main_layout">
+        tools:context=".Activites.MainActivity">
+
+        <ImageView
+            android:id="@+id/bg_weather_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@tools:sample/avatars"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cloud" />
 
         <ScrollView
+            android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -49,22 +61,22 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="16dp"
+                    android:background="@drawable/search_view_bg"
                     android:drawableStart="@drawable/search_icon"
                     android:drawablePadding="10dp"
+                    android:hint="@string/search_location"
+                    android:imeOptions="actionSearch"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
                     android:paddingStart="10dp"
                     android:paddingEnd="15dp"
-                    android:background="@drawable/search_view_bg"
-                    android:imeOptions="actionSearch"
-                    android:inputType="text"
                     android:textColor="@color/black"
-                    android:hint="@string/search_location"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:importantForAutofill="no" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/cityName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -84,7 +96,7 @@
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/cityName" />
 
                 <TextView
                     android:id="@+id/current_temp"
